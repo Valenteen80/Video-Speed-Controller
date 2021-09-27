@@ -1,8 +1,9 @@
+//------------
 const speed = document.querySelector(".speed");
 const bar = document.querySelector(".speed-bar");
 const video = document.querySelector(".flex");
 let isDrawing = false;
-
+//---------------------
 function handleMove(e) {
   const y = e.pageY - this.offsetTop;
   const percent = y / this.offsetHeight;
@@ -16,6 +17,7 @@ function handleMove(e) {
     bar.textContent = playbackRate.toFixed(2) + "x";
   }
 }
+//----------------------
 speed.addEventListener("mousemove", handleMove);
 speed.addEventListener("click", handleMove);
 speed.addEventListener("mousedown", () => (isDrawing = true));
